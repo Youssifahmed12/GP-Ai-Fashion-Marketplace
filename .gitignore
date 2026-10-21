@@ -1,0 +1,16 @@
+# Datasets, trained models and local secrets never go in git
+data/
+models/
+.env
+*.pt
+
+# Python
+.venv/
+__pycache__/
+*.egg-info/
+.pytest_cache/
+
+# Editors and OS
+.vscode/
+.idea/
+.DS_Store
