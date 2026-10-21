@@ -1,0 +1,15 @@
+[project]
+name = "gp-ai-fashion-marketplace"
+version = "0.1.0"
+description = "AI stylist for a multi-brand clothing marketplace (graduation project)"
+requires-python = ">=3.10"
+dependencies = ["psycopg[binary]>=3.1"]
+
+[project.optional-dependencies]
+# FashionCLIP embeddings and model training. Large download: PyTorch plus the model (~600 MB).
+ml = ["torch", "numpy", "transformers>=4.40", "pillow", "pyarrow", "huggingface_hub"]
+# Demo chat window.
+demo = ["streamlit>=1.50"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
